@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "kubeimran/vproappdock"
+        registry = "sighingowl/vprofiledock"
         registryCredential = "dockerhub"
     }
 
