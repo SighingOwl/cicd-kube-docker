@@ -55,9 +55,9 @@ pipeline {
 
             steps {
                 withSonarQubeEnv('sonar-pro') {
-                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile-owl \
-                   -Dsonar.projectName=vprofile-repo \
-                   -Dsonar.projectVersion=1.0 \
+                    sh '''${scannerHome}/bin/sonar-scanner \
+                   -Dsonar.organization=vprofile-repo
+                   -Dsonar.projectKey=vprofile-owl \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
                    -Dsonar.junit.reportsPath=target/surefire-reports/ \
